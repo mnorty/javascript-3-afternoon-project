@@ -74,17 +74,19 @@ function totalPopulation(object){
   The property values will be strings. 
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
-*/
+// */
 // let object = {
 //   carb: "many",
 //   fat: "so much",
 //   protein: "get swoll"
 // }
-// // let blankArr = []
-// function ingredients(object){
-//   let {carb,fat,protein} = object
-//   return blankArr.push(carb,fat,protein)
-// }
+
+function ingredients(object){
+  let {carb,fat,protein} = object
+  let blankArr = []
+  blankArr.push(carb,fat,protein)
+  return blankArr
+}
 
 
 
@@ -100,12 +102,15 @@ function totalPopulation(object){
   // // Write a function called largeNumbers that will take a destructured object as it's parameter.
   // // The object properties will be named first, second, and third and their values will be numbers.
   // Find the smallest number of the three and return that number.
+
+
 // let largeNumbers = {first: 1, second: 2, third: 3})
-let smallNum = 10
+// let smallNum = 10
 function largeNumbers( {first,second,third}) {
-  for(i = 0; i < largeNumbers.length; i++) {
-    if (largeNumbers[i].length < smallNum){
-      smallNum = largeNumbers[i]
+  let smallNum = ""
+  for(let key in largeNumbers) {
+    if (largeNumbers[key].length < smallNum){
+      smallNum = largeNumbers[key]
     }
   }
   return smallNum

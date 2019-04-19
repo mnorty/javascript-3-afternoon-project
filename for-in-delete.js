@@ -181,7 +181,14 @@ for( let prop in deleteTheBigNumbers){
   Return the updated object.
 */
 
-//Code Here
+function startsWithK(obj){
+  for( let prop in obj){
+    if (prop.startsWith("k")){
+      delete obj[prop]
+    }
+  }
+  return obj
+}
 
 
 
@@ -196,6 +203,13 @@ for( let prop in deleteTheBigNumbers){
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function  hiddenTreasure(obj){
+  for ( let prop in obj){
+    if (!obj[prop].includes("treasure")){
+      delete obj[prop]
+    }
+  }
+  return obj
+}
 
 

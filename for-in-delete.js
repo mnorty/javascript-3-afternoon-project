@@ -40,14 +40,13 @@
 */
 
 function showValues( obj ) {
+  let empty = ""
   for (let key in obj){ 
-    return obj[key]
-
-    
-
+    empty += obj[key]
   }
-  
+  return empty
 }
+
 
 
 
@@ -78,7 +77,13 @@ function greaterThan10(obj){
   Return the updated object.
 */
 
-//Code Here
+function double(obj){
+  for(let prop in obj){
+    obj[prop] = obj[prop] * 2
+  }
+  return obj
+}
+
 
 
 
@@ -92,7 +97,17 @@ function greaterThan10(obj){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj){
+  let emptstring = ""
+  for (let prop in obj){
+    if( prop.startsWith("sh")){
+      emptstring += obj[prop]
+    }
+  
+
+  }
+  return emptstring
+}
 
 
 
@@ -123,7 +138,14 @@ function greaterThan10(obj){
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj){
+  for(let prop in obj){
+    if(prop === "password"){
+      delete obj[prop]
+    }
+  }
+  return obj
+}
 
 
 
@@ -142,7 +164,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for( let prop in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[prop] > 100){
+    delete deleteTheBigNumbers[prop]
+  }
+}
 
 
 

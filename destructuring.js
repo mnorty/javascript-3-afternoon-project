@@ -107,13 +107,30 @@ function ingredients(object){
 // let largeNumbers = {first: 1, second: 2, third: 3})
 // let smallNum = 10
 function largeNumbers( {first,second,third}) {
-  let smallNum = ""
-  for(let key in largeNumbers) {
-    if (largeNumbers[key].length < smallNum){
-      smallNum = largeNumbers[key]
-    }
+  if( first < second && first < third){
+    return first
   }
-  return smallNum
+  else if( second < first && second < third){
+    return second
+  }
+  else {
+    return third
+  }
+    
+}
+
+
+
+
+
+{
+//   let smallNum = ""
+//   for(let key in largeNumbers) {
+//     if (largeNumbers[key].length < smallNum){
+//       smallNum = largeNumbers[key]
+//     }
+//   }
+//   return smallNum
 }
 
 
@@ -125,7 +142,8 @@ function largeNumbers( {first,second,third}) {
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
-numberGroups
-function numberGroups({a,b,c}){
+// numberGroups
+// function numberGroups({a,b,c}){
+//   if( a.length > b.length && a.length > c.length)
 
-}
+// }

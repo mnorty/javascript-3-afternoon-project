@@ -81,7 +81,24 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+function removeDuplicates(){
+  for(let i = 0; i<workplaceAccidents.length;i++){
+    for(let k = i +1;k<workplaceAccidents.lengthl;k++ ){
+      if (workplaceAccidents[i] === workplaceAccidents[k]){
+        i--
+        workplaceAccidents.splice(i,1)
+        // delete workplaceAccidents[i]
+      }
+    }
+  }
+}
+return workplaceAccidents
+//     let indivNum = []
+//     let newNum = workplaceAccidents.indexOf
+    
 
+//   }
+// }
 
 
 ////////// PROBLEM 3 //////////
